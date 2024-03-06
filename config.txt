@@ -1,18 +1,18 @@
 {
     "path_checkpoints": [
-        "/content/Fooocus/models/checkpoints"
+        "/content/FRC/models/checkpoints"
     ],
     "path_loras": [
-        "/content/Fooocus/models/loras"
+        "/content/FRC/models/loras"
     ],
-    "path_embeddings": "/content/Fooocus/models/embeddings",
-    "path_vae_approx": "/content/Fooocus/models/vae_approx",
-    "path_upscale_models": "/content/Fooocus/models/upscale_models",
-    "path_inpaint": "/content/Fooocus/models/inpaint",
-    "path_controlnet": "/content/Fooocus/models/controlnet",
-    "path_clip_vision": "/content/Fooocus/models/clip_vision",
-    "path_fooocus_expansion": "/content/Fooocus/models/prompt_expansion/fooocus_expansion",
-    "path_outputs": "/content/Fooocus/outputs",
+    "path_embeddings": "/content/FRC/models/embeddings",
+    "path_vae_approx": "/content/FRC/models/vae_approx",
+    "path_upscale_models": "/content/FRC/models/upscale_models",
+    "path_inpaint": "/content/FRC/models/inpaint",
+    "path_controlnet": "/content/FRC/models/controlnet",
+    "path_clip_vision": "/content/FRC/models/clip_vision",
+    "path_fooocus_expansion": "/content/FRC/models/prompt_expansion/fooocus_expansion",
+    "path_outputs": "/content/FRC/outputs",
     "default_model": "None",
     "previous_default_models": [
         "juggernautXL_version8Rundiffusion.safetensors",
