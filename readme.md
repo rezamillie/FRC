@@ -71,7 +71,7 @@ Fooocus also developed many "fooocus-only" features for advanced users to get pe
 
 You can directly download Fooocus with:
 
-**[>>> Click here to download <<<](https://github.com/lllyasviel/Fooocus/releases/download/release/Fooocus_win64_2-1-831.7z)**
+**[>>> Click here to download <<<](https://github.com/lllyasviel/Fooocus/releases/download/v2.5.0/Fooocus_win64_2-5-0.7z)**
 
 After you download the file, please uncompress it and then run the "run.bat".
 
@@ -285,11 +285,11 @@ See the common problems [here](troubleshoot.md).
 
 Given different goals, the default models and configs of Fooocus are different:
 
-| Task | Windows | Linux args | Main Model | Refiner | Config                                                                         |
-| --- | --- | --- | --- | --- |--------------------------------------------------------------------------------|
-| General | run.bat |  | juggernautXL_v8Rundiffusion | not used | [here](https://github.com/lllyasviel/Fooocus/blob/main/presets/default.json)   |
-| Realistic | run_realistic.bat | --preset realistic | realisticStockPhoto_v20 | not used | [here](https://github.com/lllyasviel/Fooocus/blob/main/presets/realistic.json) |
-| Anime | run_anime.bat | --preset anime | animaPencilXL_v100 | not used | [here](https://github.com/lllyasviel/Fooocus/blob/main/presets/anime.json)     |
+| Task      | Windows | Linux args | Main Model                  | Refiner | Config                                                                         |
+|-----------| --- | --- |-----------------------------| --- |--------------------------------------------------------------------------------|
+| General   | run.bat |  | juggernautXL_v8Rundiffusion | not used | [here](https://github.com/lllyasviel/Fooocus/blob/main/presets/default.json)   |
+| Realistic | run_realistic.bat | --preset realistic | realisticStockPhoto_v20     | not used | [here](https://github.com/lllyasviel/Fooocus/blob/main/presets/realistic.json) |
+| Anime     | run_anime.bat | --preset anime | animaPencilXL_v500          | not used | [here](https://github.com/lllyasviel/Fooocus/blob/main/presets/anime.json)     |
 
 Note that the download is **automatic** - you do not need to do anything if the internet connection is okay. However, you can download them manually if you (or move them from somewhere else) have your own preparation.
 
@@ -368,26 +368,38 @@ A safer way is just to try "run_anime.bat" or "run_realistic.bat" - they should 
 entry_with_update.py  [-h] [--listen [IP]] [--port PORT]
                       [--disable-header-check [ORIGIN]]
                       [--web-upload-size WEB_UPLOAD_SIZE]
+                      [--hf-mirror HF_MIRROR]
                       [--external-working-path PATH [PATH ...]]
-                      [--output-path OUTPUT_PATH] [--temp-path TEMP_PATH]
+                      [--output-path OUTPUT_PATH]
+                      [--temp-path TEMP_PATH]
                       [--cache-path CACHE_PATH] [--in-browser]
-                      [--disable-in-browser] [--gpu-device-id DEVICE_ID]
+                      [--disable-in-browser]
+                      [--gpu-device-id DEVICE_ID]
                       [--async-cuda-allocation | --disable-async-cuda-allocation]
-                      [--disable-attention-upcast] [--all-in-fp32 | --all-in-fp16]
+                      [--disable-attention-upcast]
+                      [--all-in-fp32 | --all-in-fp16]
                       [--unet-in-bf16 | --unet-in-fp16 | --unet-in-fp8-e4m3fn | --unet-in-fp8-e5m2]
-                      [--vae-in-fp16 | --vae-in-fp32 | --vae-in-bf16]
+                      [--vae-in-fp16 | --vae-in-fp32 | --vae-in-bf16]   
+                      [--vae-in-cpu]
                       [--clip-in-fp8-e4m3fn | --clip-in-fp8-e5m2 | --clip-in-fp16 | --clip-in-fp32]
-                      [--directml [DIRECTML_DEVICE]] [--disable-ipex-hijack]
+                      [--directml [DIRECTML_DEVICE]]
+                      [--disable-ipex-hijack]
                       [--preview-option [none,auto,fast,taesd]]
                       [--attention-split | --attention-quad | --attention-pytorch]
                       [--disable-xformers]
-                      [--always-gpu | --always-high-vram | --always-normal-vram | 
-                       --always-low-vram | --always-no-vram | --always-cpu [CPU_NUM_THREADS]]
-                      [--always-offload-from-vram] [--disable-server-log]
-                      [--debug-mode] [--is-windows-embedded-python]
-                      [--disable-server-info] [--share] [--preset PRESET]
-                      [--language LANGUAGE] [--disable-offload-from-vram]
-                      [--theme THEME] [--disable-image-log]
+                      [--always-gpu | --always-high-vram | --always-normal-vram |
+                      --always-low-vram | --always-no-vram | --always-cpu [CPU_NUM_THREADS]]
+                      [--always-offload-from-vram]
+                      [--pytorch-deterministic] [--disable-server-log]  
+                      [--debug-mode] [--is-windows-embedded-python]     
+                      [--disable-server-info] [--multi-user] [--share]  
+                      [--preset PRESET] [--disable-preset-selection]    
+                      [--language LANGUAGE]
+                      [--disable-offload-from-vram] [--theme THEME]     
+                      [--disable-image-log] [--disable-analytics]       
+                      [--disable-metadata] [--disable-preset-download]  
+                      [--enable-describe-uov-image]
+                      [--always-download-new-model]
 ```
 
 ## Advanced Features
